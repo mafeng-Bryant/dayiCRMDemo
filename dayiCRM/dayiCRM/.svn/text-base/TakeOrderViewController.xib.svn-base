@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TakeOrderViewController">
+            <connections>
+                <outlet property="btn_certain" destination="R70-h5-zVI" id="iRE-Fs-Knv"/>
+                <outlet property="btn_total_price" destination="40x-CS-fBG" id="L6Q-wu-tx6"/>
+                <outlet property="tool_bar" destination="qKz-3Z-45C" id="CP2-YH-UMz"/>
+                <outlet property="view" destination="s0d-pY-Ym4" id="skp-xv-jfE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="s0d-pY-Ym4">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="4Ra-Hg-XBw"/>
+                <outlet property="delegate" destination="-1" id="scA-Ey-spI"/>
+            </connections>
+        </tableView>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qKz-3Z-45C">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem id="aA7-p2-Rbs">
+                    <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="40x-CS-fBG">
+                        <rect key="frame" x="16" y="6" width="193" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.87058830259999997" green="0.20000001789999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </barButtonItem>
+                <barButtonItem title="Item" style="plain" id="Lar-fM-UZe">
+                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R70-h5-zVI">
+                        <rect key="frame" x="219" y="-1" width="101" height="45"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal" title="确认下单" backgroundImage="img41">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="btn_take_order:" destination="-1" eventType="touchUpInside" id="P83-Lv-4kw"/>
+                        </connections>
+                    </button>
+                </barButtonItem>
+            </items>
+        </toolbar>
+    </objects>
+    <resources>
+        <image name="img41" width="1" height="44"/>
+    </resources>
+</document>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MsgListViewController">
+            <connections>
+                <outlet property="list_view" destination="e98-oV-hBP" id="Gq6-Pg-VZj"/>
+                <outlet property="search_bar" destination="wIm-SX-312" id="ieP-fd-mqF"/>
+                <outlet property="view" destination="Y6L-Ii-DVB" id="lwt-KI-EwX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y6L-Ii-DVB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="0fF-WH-18P"/>
+                <outlet property="delegate" destination="-1" id="7Sh-eb-9F7"/>
+            </connections>
+            <point key="canvasLocation" x="224" y="374"/>
+        </tableView>
+        <view contentMode="scaleToFill" id="e98-oV-hBP">
+            <rect key="frame" x="0.0" y="0.0" width="134" height="193"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img34" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-aP-I3r">
+                    <rect key="frame" x="0.0" y="0.0" width="134" height="58"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img35" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-cX-Anz">
+                    <rect key="frame" x="0.0" y="58" width="134" height="45"/>
+                </imageView>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TV-H8-Kzn">
+                    <rect key="frame" x="3" y="66" width="129" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="活动">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn_add_click:" destination="-1" eventType="touchUpInside" id="OfD-S1-hUM"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img35" translatesAutoresizingMaskIntoConstraints="NO" id="UXI-PJ-JSJ">
+                    <rect key="frame" x="0.0" y="103" width="134" height="45"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img36" translatesAutoresizingMaskIntoConstraints="NO" id="hcK-n5-7FH">
+                    <rect key="frame" x="0.0" y="148" width="134" height="45"/>
+                </imageView>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35i-8A-KVA">
+                    <rect key="frame" x="3" y="156" width="129" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="从手机通讯录导入">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn_add_click:" destination="-1" eventType="touchUpInside" id="QF7-3X-YYc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rx-78-tg0">
+                    <rect key="frame" x="3" y="110" width="129" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="手动邀请客户">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn_add_click:" destination="-1" eventType="touchUpInside" id="ww2-bF-BBv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysS-Df-82h">
+                    <rect key="frame" x="8" y="18" width="129" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="群发消息">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn_add_click:" destination="-1" eventType="touchUpInside" id="j2l-fb-QWC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="668" y="349.5"/>
+        </view>
+        <searchBar contentMode="redraw" placeholder="搜索" id="wIm-SX-312">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <textInputTraits key="textInputTraits"/>
+            <connections>
+                <outlet property="delegate" destination="-1" id="sx3-kk-wsW"/>
+            </connections>
+            <point key="canvasLocation" x="523" y="699"/>
+        </searchBar>
+    </objects>
+    <resources>
+        <image name="img34" width="134" height="58"/>
+        <image name="img35" width="134" height="45"/>
+        <image name="img36" width="134" height="45"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

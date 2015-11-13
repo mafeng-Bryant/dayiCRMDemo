@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E973EC2D-8BB3-4A3E-8B81-67F8E88CA34B</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>905e212f-d5a8-8e49-979f-b2de6d5dff46++357</key>
+		<string>svn://192.168.1.200/crm/trunk/mobile/iOS/dayiCRM</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>905e212f-d5a8-8e49-979f-b2de6d5dff46++357</key>
+		<string>dayiCRM/</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>905e212f-d5a8-8e49-979f-b2de6d5dff46++357</key>
+		<string>svn://192.168.1.200/crm</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://192.168.1.200/crm/trunk/mobile/iOS/dayiCRM</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>905e212f-d5a8-8e49-979f-b2de6d5dff46++357</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>905e212f-d5a8-8e49-979f-b2de6d5dff46++357</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dayiCRM</string>
+		</dict>
+	</array>
+</dict>
+</plist>

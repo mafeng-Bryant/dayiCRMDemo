@@ -1,0 +1,269 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
+#define IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 ? YES : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define dayiColor [UIColor colorWithRed:225.0f/255.0f green:48.0f/255.0f blue:36.0f/255.0f alpha:1.0f]
+
+#ifndef DEBUG
+#    define NSLog(...)
+#endif
+
+
+
+/*----------------------- 后台数据接口定义 -----------------------*/
+
+//服务器地址
+//#define BASE_URL @"http://meetrend.f3322.org:9090/dayi/"
+//#define BASE_URL @"http://219.134.212.229:88/dayi/"
+
+ //#define BASE_URL @"http://192.168.1.200:9090/dayi/"  //测试环境
+#define BASE_URL @"http://weixin.meetrend.com/crm/"//正式环境
+//#define BASE_URL @"http://192.168.1.106:8085/dayi/" //李立本地服务器
+
+
+//登录
+#define LOGIN_URL @"api/Ecp.OnlineUser.apiLogin"
+
+//导入会员
+#define IMPORT_MEMBER_URL @"api/Crm.Customer.importMember"
+
+//会员列表
+#define MEMBER_LIST_URL @"api/Crm.Customer.memberList"
+
+//删除会员
+#define DELETE_MEMBER_URL @"api/Crm.Customer.deleteMember"
+
+//邀请会员
+#define INVITE_MEMBER_URL @"api/Crm.Customer.inviteMember"
+
+//会员详情
+#define MEMBER_INFO_URL @"api/Crm.Customer.memberInformation"
+
+//修改会员资料
+#define UPDATE_MEMBER_URL @"api/Crm.Customer.updateMember"
+
+//订单列表
+#define ORDER_LIST_URL @"api/Crm.Order.orderList"
+
+//确认订单列表
+#define CONFIRMEDORDER_LIST_URL @"api/Crm.Order.confirmedOrderList"
+
+//订单详情
+#define ORDER_DETAIL_URL @"api/Crm.OrderDetail.getOrderDetailById"
+
+//执行人列表
+#define EXECUTOR_LIST_URL @"api/Ecp.Employee.getExecutorList"
+
+//添加执行人
+#define ADD_EMPLOYEE_URL @"api/Ecp.Employee.addEmployee"
+
+//订单确认
+#define FIREM_ORDER_URL @"api/Ecp.Employee.firmOrder"
+
+//库存历史订单记录
+#define ORDER_HISTORY_URL @"api/Crm.Order.doQueryHistoryOrder"
+
+//聊天列表
+#define TALK_LIST_URL @"api/Wx.Talk.talkList"
+
+//聊天详情
+#define TALK_DETAIL_URL @"api/Wx.Talk.talkDetail"
+
+//库存产品类型、年份
+#define INVENTORY_CATALOG_URL @"api/Crm.Inventory.inventoryProductCatalog"
+
+//库存根据年份得到产品列表
+#define GET_PRODUCT_BYID_URL @"api/Crm.Inventory.getProductByYearId"
+
+//库存详情
+#define GET_INVENTORYBYID_URL @"api/Crm.Inventory.getInventoryById"
+
+//修改库存详情
+#define UPDATA_INVENTORY_URL @"api/Crm.Inventory.updateInventoryModel"
+
+//全局搜索
+#define GLOABL_SEARCH_URL @"api/Wx.Talk.globalSearch"
+
+//上传
+#define UPLOAD_URL @"Ecp.Picture.upload.jup"
+
+//发送消息
+#define SEND_MSG_URL @"api/Wx.Talk.sendMessage"
+
+//发送语音图片消息
+#define SEND_MULTIMSG_URL @"api/Wx.Talk.sendMessage.jup"
+
+//找回密码
+#define FORGET_PASSWORD_URL @"api/Ecp.User.forgetPassword"
+
+//重置密码
+#define RESET_PASSWORD_URL @"api/Ecp.User.resetPassword"
+
+//获取门店列表
+#define GET_STORELIST_URL @"api/Crm.Store.getStoreListbyId"
+
+//取消订单
+#define CANCEL_ORDER_URL @"api/Crm.Order.cancelOrder"
+
+//确认转账
+#define CONFIRM_TRANSFER_URL @"api/Crm.Order.confirmTransfer"
+
+//收入
+#define INCOME_ACCOUNT_URL @"api/Crm.Order.inComeAccount"
+
+//门店订单详情
+#define ORDER_STORE_DETAIL_URL @"api/Crm.OrderDetail.storeOrderDetail"
+
+//订单结账
+#define CHECKOUT_URL @"api/Crm.Order.checkOut"
+
+//确认结账
+#define CONFIRM_CHECKOUT_URL @"api/Crm.Order.confirmCheckOut"
+
+//包间列表
+#define ROOM_LIST_URL @"api/Crm.Room.allRroom"
+
+//茶品列表
+#define PRODUCT_LIST_URL @"api/Crm.Inventory.productList"
+
+//会员用户列表
+#define MEMBERUSER_LIST_URL @"api/Ecp.User.prepareLists"
+
+//快速下单
+#define FAST_TAKE_ORDER @"api/Crm.Order.fastTakeOrder"
+
+//我的群组
+#define MY_GROUP_URL @"api/Ecp.Group.myGroup"
+
+//创建群组
+#define CREATE_GROUP_URL @"api/Ecp.Group.createGroup"
+
+//加入群组
+#define UPDATE_GROUP_URL @"api/Ecp.Group.updateGroup"
+
+//发送类型
+#define SEND_TYPE_URL @"api/Ecp.GroupMessage.sendType"
+
+//群组信息
+#define GROUP_DETAIL_URL @"api/Ecp.Group.getGroupById"
+
+//群发消息
+#define SEND_GROUPMSG_URL @"api/Ecp.GroupMessage.sendMessage"
+
+//群历史消息
+#define HISTORY_MSG_URL @"api/Ecp.GroupMessage.historyMsg"
+
+//活动列表
+#define ACTIVITY_LIST_URL @"api/Crm.MemberActivity.memberActivityList"
+
+//添加活动
+#define CREATE_ACTIVITY_URL @"api/Crm.MemberActivity.createMemberActivity"
+
+//删除活动
+#define DELETE_ACTIVITY_URL @"api/Crm.MemberActivity.deleteMemberActivity"
+
+//更新活动
+#define UPDATE_ACTIVITY_URL @"api/Crm.MemberActivity.updateMemberActivity"
+
+//活动详情
+#define DETAIL_ACTIVITY_URL @"api/Crm.MemberActivity.memberActivityDetail"
+
+//我的个人信息
+#define MY_INFORMATION_URL @"api/Ecp.User.myInformation"
+
+//修改个人信息
+#define UPDATE_INFORMATION_URL @"api/Ecp.User.updateInformation"
+
+//我的二维码
+#define MY_QRCODE_URL @"api/Ecp.User.myQRCode"
+
+//修改密码
+#define MODIFY_PASSWORD_URL @"api/Ecp.OnlineUser.modifyPassword"
+
+//库存拆分
+#define SPLIT_INVENTORY_URL @"api/Crm.Inventory.splitInventory"
+
+//库存盘点列表
+#define INVENTORY_REPORT_LIST @"api/Crm.InventoryReport.inventoryReportList"
+
+//库存盘点（未已盘点数据）
+#define INVENTORY_REPORT_DETAIL @"api/Crm.InventoryReportDetail.loadInventoryReportData"
+
+//添加，修改盘点
+#define HANDLE_REPORT_URL @"api/Crm.InventoryReport.handleReport"
+
+//删除盘点信息
+#define DELETE_REPORT_URL @"api/Crm.InventoryReport.deleteReport"
+
+//盘点报告详情
+#define REPORT_DETAIL_URL @"api/Crm.InventoryReport.reportWithDetail"
+
+//系统更新消息
+#define FIND_MODEL_URL @"api/Crm.SystemUpdate.findModel"
+
+//系统消息
+#define SYSTEM_MESSAGE_URL @"api/Crm.SystemUpdate.systemMessage"
+
+//问题反馈
+#define FEED_BACK_URL @"api/Crm.FeedBack.addFeedBack"
+
+//功能介绍
+#define INCTRODUCTION_URL @"api/Crm.FeedBack.introduction"
+
+//审核列表
+#define CHANNEL_APPLY_URL @"api/Crm.ChannelApply.channelApplyList"
+
+//审核
+#define AUDIT_RECORD_URL @"api/Crm.ChannelApply.auditRecord"
+
+//历史申请记录
+#define HISTORY_RECORD_URL @"api/Crm.ChannelApply.applyHistoryRecord"
+
+//包间预订列表
+#define RESERVE_LIST_URL @"api/Crm.RoomReserve.reserveList"
+
+//包间预订详情
+#define RESERVE_DETAIL_URL @"api/Crm.RoomReserve.reserveDetail"
+
+//添加预定
+#define ADD_ROOM_URL @"api/Crm.RoomReserve.addRoomReserve"
+
+//门店二维码
+#define STORE_QRCODE_URL @"api/Crm.Store.getStoreQRCode"
+
+//获取收入数据
+#define INCOME_URL @"api/Crm.ChannelApply.inCome"
+
+//添加认证
+#define APPLY_AUTH_URL @"api/Crm.ChannelApply.applyAuth"
+
+//实名认证列表
+#define AUTH_LIST_URL @"api/Crm.ChannelApply.authList"
+
+//认证详情信息
+#define AUTH_DETAIL_URL @"api/Crm.ChannelApply.authDetail"
+
+//审核认证
+#define AUDIT_AUTH_URL @"api/Crm.ChannelApply.auditAuth"
+
+
+#define DEVICETYPE @"4"
+
+#endif
